@@ -11,6 +11,10 @@ public class IoT : MonoBehaviour
     private float potRotation = 0.0f;
     public Button upBtn;
     public Button dwnBtn;
+    public Button allUpBtn;
+    public Button allDownBtn;
+    public Button lightBtn;
+    public Text lightModeTxt;
 
     // Start is called before the first frame update
     void Start()
@@ -80,5 +84,26 @@ public class IoT : MonoBehaviour
             upBtn.interactable = true;
         }
     }
+
+    public void CurtainAllUp() {
+        //insert code for take the curtain all the way up and disable buttons
+    }
+
+    public void CurtainAllDown() {
+        //insert code for take the curtain all the way down and disable buttons
+    }
+
+    public void LightMode() {
+        string currentText = lightModeTxt.text;
+        //insert code for toggling light mode
+        Debug.Log(currentText);
+
+        if(currentText == "Light Mode is ON") {
+            lightModeTxt.text = "Light Mode is OFF";
+        } else {
+            lightModeTxt.text = "Light Mode is ON";
+        }
+    }
+
 }
 
